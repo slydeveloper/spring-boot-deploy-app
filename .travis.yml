@@ -5,6 +5,5 @@ services:
   - docker
 
 script:
-  - mvn clean package
   - cd ./docker && ./docker_build_and_run.sh
   - curl -f http://localhost:8080/actuator/health
