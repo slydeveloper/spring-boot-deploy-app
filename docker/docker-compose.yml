@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  sb-deploy-app-build:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: spring_boot_deploy_app_dev
+    image: ${DOCKER_IMAGE_NAME}
+    environment:
+      - SPRING_BOOT_DEPLOY_APP_TITLE=Spring Boot Deploy App Github
+      - SPRING_BOOT_DEPLOY_APP_NAME=Spring Boot Deploy App Github

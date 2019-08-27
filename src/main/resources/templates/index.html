@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/dashboard.css}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title th:text="${appTitle}">Spring Boot Deploy App</title>
+</head>
+<body class="bg-dark">
+    <div class="dashboard-header px-4 py-4 mx-auto mt-3 text-center">
+        <h1 class="display-5 text-white" th:text="${pageTitle}"></h1>
+        <p class="lead text-secondary" th:text="${pageText}"></p>
+    </div>
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card shadow-sm mb-4" th:classappend="${pageCardHeaderColor}">
+                <div class="card-header text-white">
+                    <h4 class="font-weight-normal">Application name</h4>
+                </div>
+                <div class="card-body bg-white">
+                    <h5 class="card-title" th:text="${appName}"></h5>
+                </div>
+            </div>
+            <div class="card shadow-sm mb-4" th:classappend="${pageCardHeaderColor}">
+                <div class="card-header text-white">
+                    <h4 class="font-weight-normal">Application version</h4>
+                </div>
+                <div class="card-body bg-white">
+                    <h5 class="card-title" th:text="${appVersion}"></h5>
+                </div>
+            </div>
+            <div class="card shadow-sm mb-4" th:classappend="${pageCardHeaderColor}">
+                <div class="card-header text-white">
+                    <h4 class="font-weight-normal">Container ID</h4>
+                </div>
+                <div class="card-body bg-white">
+                    <h5 class="card-title" th:text="${containerId}"></h5>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center">
+            <div class="row">
+                <div class="col-10 col-md">
+                    <small><a th:href="${pageProjectUrl}"
+                              th:text="${pageProjectUrlName}"
+                              class="d-block text-muted"
+                              target="_blank"></a></small>
+                    <small class="d-block text-muted">&copy; 2019</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
