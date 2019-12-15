@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ./docker_build.sh
+source docker-build.sh
 
 docker-compose up -d
