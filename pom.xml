@@ -11,7 +11,7 @@
 
 	<groupId>pl.sly.tools</groupId>
 	<artifactId>spring-boot-deploy-app</artifactId>
-	<version>3.0</version>
+	<version>1.1</version>
 	<name>spring-boot-deploy-app</name>
 	<description>Project for Spring Boot which can be use as deployment application for the Docker or K8S</description>
 

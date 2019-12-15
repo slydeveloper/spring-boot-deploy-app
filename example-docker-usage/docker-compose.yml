@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
     container_name: spring_boot_deploy_app_example
-    image: slydeveloper/spring-boot-deploy-app:1.0
+    image: slydeveloper/spring-boot-deploy-app:1.1
     environment:
       - SPRING_BOOT_DEPLOY_APP_TITLE=My Spring Boot Deploy App Example
       - SPRING_BOOT_DEPLOY_APP_NAME=My Spring Boot Deploy App Title
