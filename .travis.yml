@@ -9,6 +9,6 @@ services:
 
 script:
   - cd ./docker
-  - chmod +x docker_build_and_run.sh && ./docker_build_and_run.sh
+  - chmod +x docker-build-and-run.sh && ./docker-build-and-run.sh
   - sleep 30
   - curl -f http://localhost:8080/actuator/health
