@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sbda-app-deployment
+  labels:
+    app: sbda-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: sbda-app-pod
+      app: sbda-app
+  template:
+    metadata:
+      name: sbda-app-pod
+      labels:
+        name: sbda-app-pod
+        app: sbda-app
+    spec:
+      containers:
+      - name: sbda-app
+        image: slydeveloper/spring-boot-deploy-app:2.1
+        env:
+        - name: SPRING_BOOT_DEPLOY_APP_TITLE
+          value: "My Spring Boot Admin title"
+        - name: SPRING_BOOT_DEPLOY_APP_NAME
+          value: "My app v2.1"
+        ports:
+        - containerPort: 8080
